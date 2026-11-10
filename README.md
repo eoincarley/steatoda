@@ -9,7 +9,7 @@ The noble false widow spider (*Steatoda nobilis*) has rapidly colonised Britain,
 ## Repository structure
 
 ```
-false-widow/
+steatoda/
 ├── scripts/
 │   ├── fetch_inaturalist.py        # Download iNaturalist occurrence records
 │   ├── fetch_gbif.py               # Download GBIF occurrence records
@@ -20,16 +20,7 @@ false-widow/
 │   ├── extract_points_local.py     # Sample satellite values at occurrence/background points
 │   └── generate_background.py      # Generate bias-corrected pseudo-absence background points
 ├── notebooks/
-│   └── analysis.ipynb              # MaxEnt model, cross-validation, figures, control analysis
-├── research-paper/
-│   ├── manuscript.tex              # LaTeX manuscript
-│   ├── references.bib              # Bibliography
-│   └── custom.bst                  # Custom BibTeX style (numbered, no titles, DOI hyperlinks)
-├── data/                           # (gitignored — see Data section below)
-│   ├── raw/                        # Raw downloads from APIs and GEE
-│   ├── processed/                  # Cleaned, analysis-ready CSVs and raster stacks
-│   └── cache/                      # Cached model and CV results (created by notebook)
-├── outputs/                        # Figures (PNG) and suitability GeoTIFFs
+│   └── analysis.ipynb              # MaxEnt model, cross-validation, figures, control analysis              
 ├── requirements.txt                # Core Python dependencies (pinned)
 ├── requirements-fetch.txt          # Additional deps for data collection and control analysis
 └── .gitignore
