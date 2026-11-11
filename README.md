@@ -32,7 +32,6 @@ steatoda/
 - **GDAL system library** — required by `rasterio` and `geopandas`. Install before `pip install`:
   - macOS: `brew install gdal`
   - Ubuntu/Debian: `sudo apt install gdal-bin libgdal-dev`
-- **LaTeX** (optional) — only needed to compile the manuscript (`pdflatex` + `bibtex`)
 
 ## Quick start
 
@@ -119,18 +118,6 @@ Alternatively, to execute the notebook non-interactively:
 jupyter nbconvert --to notebook --execute notebooks/analysis.ipynb --ExecutePreprocessor.timeout=600
 ```
 
-### Compiling the manuscript
-
-```bash
-cd research-paper
-pdflatex manuscript.tex
-bibtex manuscript
-pdflatex manuscript.tex
-pdflatex manuscript.tex
-```
-
-The full LaTeX + BibTeX cycle is required to resolve citations and cross-references.
-
 ## Outputs
 
 After running the notebook, the `outputs/` directory will contain:
@@ -170,11 +157,3 @@ After running the notebook, the `outputs/` directory will contain:
 |------|-------------|
 | `correlation_heatmap.png` | Predictor correlation matrix |
 | `kde_distributions.png` | KDE distributions of satellite variables (presence vs background) |
-
-## Citation
-
-> Carley, E. P. and Power, R. A. (2026). Predicting the distribution of *Steatoda nobilis* in Western Europe using satellite observations of artificial light and land surface temperature. *Biology and Environment: Proceedings of the Royal Irish Academy*.
-
-## License
-
-TBD
